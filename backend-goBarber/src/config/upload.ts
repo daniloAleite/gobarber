@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import path from 'path';
 import multer, { StorageEngine } from 'multer';
 import crypto from 'crypto';

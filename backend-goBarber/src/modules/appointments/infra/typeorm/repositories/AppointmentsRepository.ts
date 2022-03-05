@@ -34,7 +34,7 @@ class AppointmentsRepository implements IAppointmentsRepository {
         provider_id,
         date: Raw(
           dateFieldName =>
-            `to_char(${dateFieldName}, 'MM-YYYY') = '${paserdMonth}-${year}'`,
+            `to_char(${dateFieldName}, 'MM-YYYY') = '${paserdMonth}-${year}'`, // função do postgres de concersão de data
         ),
       },
     });
@@ -56,7 +56,7 @@ class AppointmentsRepository implements IAppointmentsRepository {
         provider_id,
         date: Raw(
           dateFieldName =>
-            `to_char(${dateFieldName}, 'DD-MM-YYYY') = '${parsedDay}-${parsedMonth}-${year}'`,
+            `to_char(${dateFieldName}, 'DD-MM-YYYY') = '${parsedDay}-${parsedMonth}-${year}'`, // função do postgres de concersão de data
         ),
       },
     });
